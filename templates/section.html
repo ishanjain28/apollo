@@ -17,8 +17,6 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {%- set show_pages = show_pages | filter(attribute="extra.in_homepage", value=true) %}
-
             {{ post_macros::list_posts(pages=show_pages) }}
         </main>
     {% endblock post_list %}
